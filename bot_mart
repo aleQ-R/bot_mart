@@ -1,0 +1,14 @@
+intents.message_content = True
+
+mart=commands.Bot(command_prefix="/",intents=intents)
+
+@mart.event
+
+async def on_ready():
+    print(f"iniciando {mart.user}")
+
+@mart.command()
+async def hola(ctx):
+    await ctx.send(f"hola me llamo {mart.user}")
+
+mart.run("")
